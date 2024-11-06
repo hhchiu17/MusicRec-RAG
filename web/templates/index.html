@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .nav-tabs {
+            background-color: black;
+        }
+
+        .nav-tabs .nav-link {
+            color: white;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('/static/03.JPG');
+            background-size: cover;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: white;
+            font-weight: bold;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #d3d3d3;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .analysis-section {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+        }
+
+        /* "進入聊天室"按鈕的樣式 */
+        .btn-light-gray {
+            background-color: #d3d3d3;
+            color: black;
+            border: none;
+        }
+
+        .btn-light-gray:hover {
+            background-color: #c0c0c0;
+        }
+    </style>
+    <title>BDSE3502</title>
+</head>
+
+<body>
+    <!-- 標籤頁 -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" href="/" role="tab">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="chainlit-tab" href="/chainlit" role="tab" target="_blank">Chat with AI agents</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="analysis-tab" data-toggle="tab" href="http://192.168.31.42:31443" role="tab" aria-controls="analysis"
+                aria-selected="true">Data Visualization</a>
+        </li>
+    </ul>
+
+    <div class="hero">
+        <div>
+            <h1 style="font-weight: bold;">Welcome</h1>
+            <p>Quick Start</p>
+            <button class="btn btn-light-gray btn-lg" onclick="window.open('/chainlit', '_blank')">Start</button>
+        </div>
+    </div>
+</body>
+
+</html>
