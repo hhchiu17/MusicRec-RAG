@@ -1,0 +1,36 @@
+# python 3.10
+
+# dagster
+dagster==1.8.11
+# dagster==1.8.12
+dagster-webserver==1.8.11
+# dagster-postgres==0.24.11
+dagster_postgres
+dagit==1.8.11
+dagster_aws
+
+
+# data 
+# pandas==2.2.3
+pandas==2.2.2 
+numpy
+
+# database
+pymongo==4.10.1
+sqlalchemy==2.0.35
+psycopg_pool
+# sqlalchemy==2.0.36
+feast==0.40.1
+chromadb==0.4.24
+
+# api
+ytmusicapi==1.8.2
+spotipy==2.24.0
+spotdl
+
+# general
+python-dotenv==1.0.1
+retry==0.9.2
+configparser==7.1.0
+psycopg==3.2.3
+requests==2.32.3

@@ -1,0 +1,24 @@
+project: rag
+registry:
+  registry_type: sql
+  path: "postgresql+psycopg://pikamongo:pikapikachuuu@svc-postgres-nodeport:5432/feast-rag"
+  cache_ttl_seconds: 60
+  sqlalchemy_config_kwargs:
+    echo: false
+    pool_pre_ping: true
+provider: local
+
+offline_store:
+  type: postgres
+  host: svc-postgres-nodeport
+  port: 5432
+  database: cleaned_raw_data
+  user: pikamongo
+  password: "pikapikachuuu"
+
+online_store:
+  type: redis
+  connection_string: "svc-redis-nodeport:6379"
+  
+entity_key_serialization_version: 2
+

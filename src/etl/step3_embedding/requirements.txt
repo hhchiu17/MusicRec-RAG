@@ -1,0 +1,7 @@
+pandas==2.2.3
+requests==2.32.3
+chromadb==0.4.24
+sqlalchemy==2.0.36
+dagster==1.8.12
+dagster_postgres
+dagster_aws

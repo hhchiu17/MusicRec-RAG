@@ -1,0 +1,9 @@
+pandas == 2.2.2 
+configparser ==7.1.0
+pymongo ==4.10.1
+configparser
+sqlalchemy ==2.0.35
+dagster==1.8.11
+feast ==0.40.1
+psycopg==3.2.3
+psycopg-pool==3.2.3
