@@ -23,8 +23,14 @@ class OnlineFeatureManager:
             'rag_feature:lyrics'
         ]):
         self.rag_features = rag_features
-        self.enviroment_manager = EnvManager()
-        self.postgres_conn_str = f"postgresql://pikamongo:pikapikachuuu@svc-postgres-nodeport:5432/cleaned_raw_data"
+        self.env_manager = EnvManager()
+        pg_id = self.env_manager.get("POSTGRES_ID")
+        pg_pw = self.env_manager.get("POSTGRES_PW")
+        pg_host = self.env_manager.get("POSTGRES_HOST")
+        pg_port = self.env_manager.get("POSTGRES_PORT")
+        pg_db = self.env_manager.get("POSTGRES_RAG_DB")
+
+        self.postgres_conn_str = f"postgresql://{pg_id}:{pg_pw}@{pg_host}:{pg_port}/{pg_db}"
         self.feature_server_url = f"http://rag-feast-feast-feature-server:80/get-online-features"
         self.engine = create_engine(self.postgres_conn_str)
  

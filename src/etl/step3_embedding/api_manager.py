@@ -6,9 +6,9 @@ from .env_manager import EnvManager
 class OpenAPIManager:
     def __init__(self, env_manager: EnvManager = EnvManager()):
         self.env_manager = env_manager
-        self.openai_api_key = "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"
+        self.openai_api_key = self.env_manager.get("OPENAI_API_KEY")
         self.openai_embedding_site = "https://api.openai.com/v1/embeddings"
-        self.embedding_model = "text-embedding-3-small"
+        self.embedding_model = "text-embedding-3-fsmall"
         
         self.base_url = "https://api.openai.com/v1"
         self.primary_model = "gpt-4o"
